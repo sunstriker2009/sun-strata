@@ -10,6 +10,7 @@ This repository was generated from **STRATA by Sun**, the SUN product repository
 4. Add stack-specific CI (e.g. .NET 10, Next.js); generic CI checks repository structure only.
 5. Add a license if appropriate; choose it deliberately for the product.
 6. Confirm workflow permissions are restricted to what each job needs.
+7. Optionally adopt [SUN asset preparation](ASSET-PREPARATION.md) after approving product artwork; the manual-only workflow does nothing until configured.
 
 ## 2. GitHub repository settings (not copied by templates)
 
