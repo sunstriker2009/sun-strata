@@ -24,3 +24,9 @@ The workflow requires `scripts/prepare-assets.py`, `assets/requirements.txt`, an
 If frequent asset changes justify automated checks, add a separate PR with a path-filtered workflow for approved master paths, override paths, configuration, and generator tests. Avoid running it on ordinary application changes to conserve GitHub Actions minutes. Do not make this manual-only workflow a required PR check.
 
 **Governance:** Approved artwork, raster/vector choices, and optical icon variants remain product-specific. Follow [FOUNDRY's asset adoption guide](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/ASSET-ADOPTION.md) and the [SUN branding standard](https://github.com/sunstriker2009/sun-ecosystem/blob/main/docs/governance/PRODUCT-BRANDING.md).
+
+## Disposable end-to-end validation
+
+The separate [asset adoption end-to-end workflow](../.github/workflows/asset-e2e-validation.yml) tests STRATA's documented FOUNDRY adoption flow inside a temporary GitHub Actions workspace. It downloads scripts and dependencies from a **pinned FOUNDRY commit**, creates synthetic (not product-approved) PNG masters, initializes configuration, verifies override preservation, tests non-overwrite behavior and tamper rejection, then uploads generated assets for inspection. The fixture is discarded with the runner.
+
+This tests generator integration and artifact upload, **not** GitHub repository creation or the manual-only production workflow dispatch. A real disposable GitHub repository and its manual dispatch would be required to validate those remaining platform-level steps. The E2E workflow is path-filtered and is not a required check for ordinary application changes.
