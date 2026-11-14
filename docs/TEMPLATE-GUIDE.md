@@ -9,3 +9,5 @@
 7. Use PRs and squash merges for subsequent changes.
 
 STRATA is intentionally stack-agnostic; it does not compile .NET or Next.js projects. It only provides baseline repository checks and governance scaffolding.
+
+Optional product branding preparation is described in [ASSET-PREPARATION.md](ASSET-PREPARATION.md). It is not enabled automatically and does not substitute for owner approval.
