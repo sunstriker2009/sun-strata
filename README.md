@@ -13,6 +13,7 @@ Includes:
 - Conventional Commit pull request title check
 - Pull request template and CODEOWNERS starter
 - Setup checklist and template usage guide
+- Optional, manual-only asset preparation workflow (requires explicit product adoption)
 
 **Get started:** [Template guide](docs/TEMPLATE-GUIDE.md) · [Repository setup](docs/REPOSITORY-SETUP.md)
 
