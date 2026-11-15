@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/assets/readme-banner-v1.png" alt="STRATA by Sun — Structure. Foundation. Growth." width="100%">
+  <img src="branding/assets/readme-banner.png" alt="STRATA by Sun — Structure. Foundation. Growth." width="100%">
 </p>
 
 # STRATA by Sun
