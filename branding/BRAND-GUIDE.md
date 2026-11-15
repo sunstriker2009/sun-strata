@@ -13,14 +13,14 @@
 
 ## Assets and provenance
 
-- `assets/symbol-dark.svg`, `assets/symbol-light.svg`, `assets/symbol-small.svg`: compact geometric adaptations.
-- `assets/lockup-dark.svg`: simplified dark-background lockup.
-- `assets/readme-banner-v1.png`: approved panoramic production banner, with STRATA, **by Sun** and tagline.
+- `assets/refs/symbol-dark.svg`, `assets/refs/symbol-light.svg`, `assets/refs/symbol-small.svg`: compact geometric reference adaptations.
+- `assets/refs/lockup-dark.svg`: simplified dark-background reference lockup.
+- `assets/readme-banner.png`: approved panoramic production banner, with STRATA, **by Sun** and tagline.
 - `archive/originals/readme-banner-v1.png`: byte-identical archival copy of the approved banner.
 - `archive/originals/symbol-reference-v1.png`: approved white-background symbol reference (not a transparent canonical symbol).
 - `archive/concepts/concept-banner-v1.png`: earlier concept banner preserved outside production assets.
 
-The raster artwork was uploaded without alteration and moved by Git blob SHA; no raster artwork was regenerated. A true transparent canonical symbol and PNG icon exports remain future work.
+The raster artwork was uploaded without alteration and moved by Git blob SHA; no raster artwork was regenerated. A true transparent canonical `assets/symbol.png` and dimensioned PNG icon exports remain future work; do not use the white-background archival reference as an approved transparent symbol. Only `readme-banner.png` is currently approved as an active raster asset. Legacy vector adaptations are kept in `assets/refs/`.
 
 ## Template safety
 
