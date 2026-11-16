@@ -11,7 +11,7 @@ STRATA is SUN-G002, the stack-agnostic template. FOUNDRY (SUN-G003) provisions r
 - Asset preparation is opt-in/manual, artifact-only, and separate from branding ZIP installation. The disposable runner E2E test validates generator integration, not a live GitHub repository factory or production dispatch.
 - Current branding uses approved PNG banner/symbol/icons; legacy vector references and archives remain. Merged [#6](https://github.com/sunstriker2009/sun-strata/pull/6) normalized the banner/reference layout; [#7](https://github.com/sunstriker2009/sun-strata/pull/7), [#8](https://github.com/sunstriker2009/sun-strata/pull/8) and [#9](https://github.com/sunstriker2009/sun-strata/pull/9) established the canonical symbol and raster exports.
 - Fleet governance alignment was reported successful by the operator. This documentation review is not a new live ruleset audit.
-- STRATA has no `branding-auto-install.yml` hook in the reviewed tree and no numbered revision snapshots. The merged live hook pilot belongs to ASTELVO [#39](https://github.com/sunstriker2009/sun-astelvo/pull/39), not STRATA.
+- STRATA has no `branding-auto-install.yml` hook in the reviewed tree and no numbered revision snapshots. The merged live hook pilot belongs to ASTELVO [#39](https://github.com/sunstriker2009/sun-workbench/pull/39), not STRATA.
 
 ## Pending, when explicitly resumed
 
