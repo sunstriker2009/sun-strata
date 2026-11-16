@@ -1,7 +1,7 @@
 # Using STRATA by Sun
 
-1. On GitHub, open `sunstriker2009/sun-strata` (after the repository rename).
-2. Enable **Settings → General → Template repository** on the source repository (one-time setup).
+1. On GitHub, open `sunstriker2009/sun-strata`.
+2. The source is already a template repository as checked for this handoff. If using a fork or replacement source, verify its template setting first.
 3. Select **Use this template → Create a new repository**.
 4. Choose a product repository name and visibility.
 5. Follow `docs/REPOSITORY-SETUP.md` in the generated repository.

@@ -30,3 +30,7 @@ If frequent asset changes justify automated checks, add a separate PR with a pat
 The separate [asset adoption end-to-end workflow](../.github/workflows/asset-e2e-validation.yml) tests STRATA's documented FOUNDRY adoption flow inside a temporary GitHub Actions workspace. It downloads scripts and dependencies from a **pinned FOUNDRY commit**, creates synthetic (not product-approved) PNG masters, initializes configuration, verifies override preservation, tests non-overwrite behavior and tamper rejection, then uploads generated assets for inspection. The fixture is discarded with the runner.
 
 This tests generator integration and artifact upload, **not** GitHub repository creation or the manual-only production workflow dispatch. A real disposable GitHub repository and its manual dispatch would be required to validate those remaining platform-level steps. The E2E workflow is path-filtered and is not a required check for ordinary application changes.
+
+## Branding ZIP installation is separate
+
+The shared FOUNDRY [branding ZIP installer](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/BRANDING-ZIP-INSTALLER.md) installs reviewed PNG packages and maintains immutable `branding/revisions/vN.zip` snapshots. Its same-branch hook was first adopted by ASTELVO; it is **not installed in STRATA**. This optional generator workflow neither installs uploaded ZIPs nor creates revisions. Hook adoption and legacy archive migration require separate reviewed changes; see the [handoff](GOVERNANCE-HANDOFF.md).

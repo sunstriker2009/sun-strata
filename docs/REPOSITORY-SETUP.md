@@ -30,8 +30,8 @@ This repository was generated from **STRATA by Sun**, the SUN product repository
 
 ## 4. Bootstrap tool
 
-Optional governance auditing and settings provisioning:
-https://github.com/sunstriker2009/sun-repo-bootstrap
+Governance auditing and settings provisioning are maintained by FOUNDRY (the internal CLI still uses Sun.RepoBootstrap):
+https://github.com/sunstriker2009/sun-foundry
 
 Policy source:
 https://github.com/sunstriker2009/sun-ecosystem/blob/main/docs/governance/GIT-WORKFLOW.md
