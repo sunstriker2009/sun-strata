@@ -33,4 +33,4 @@ This tests generator integration and artifact upload, **not** GitHub repository 
 
 ## Branding ZIP installation is separate
 
-The shared FOUNDRY [branding ZIP installer](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/BRANDING-ZIP-INSTALLER.md) installs reviewed PNG packages and maintains immutable `branding/revisions/vN.zip` snapshots. Its same-branch hook was first adopted by ASTELVO; it is **not installed in STRATA**. This optional generator workflow neither installs uploaded ZIPs nor creates revisions. Hook adoption and legacy archive migration require separate reviewed changes; see the [handoff](GOVERNANCE-HANDOFF.md).
+The shared FOUNDRY [branding ZIP installer](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/BRANDING-ZIP-INSTALLER.md) installs reviewed PNG packages and maintains immutable `branding/revisions/vN.zip` snapshots. Its same-branch hook was first adopted by WORKBENCH; it is **not installed in STRATA**. This optional generator workflow neither installs uploaded ZIPs nor creates revisions. Hook adoption and legacy archive migration require separate reviewed changes; see the [handoff](GOVERNANCE-HANDOFF.md).
