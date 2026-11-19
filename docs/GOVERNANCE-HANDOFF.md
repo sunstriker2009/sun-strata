@@ -1,9 +1,0 @@
-# STRATA resumption handoff
-
-Checkpoint: 2026-11-16. STRATA (SUN-G002) is the SUN **repository template**; FOUNDRY (SUN-G003) is the factory and shared automation host. Ecosystem (SUN-G001) owns registry/policy/central handbook. Read the [FOUNDRY checkpoint](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/GOVERNANCE-HANDOFF.md) and [issues](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/ISSUES-AND-GAPS.md), then verify external state before editing.
-
-Current products: OUTPOST by Sun / SUN-C001 / sun-outpost (HALO → ORYVA → OUTPOST, stable Sun.Security) and WORKBENCH by Sun / SUN-P001 / sun-workbench (formerly ASTELVO, stable Sun.Workspace). STRATA #12 carried WORKBENCH migration references. The later combined OUTPOST pilot run 43934714433 required no STRATA diff and produced no STRATA PR; the target, FOUNDRY and Ecosystem migration PRs are merged.
-
-`branding/revisions/.gitkeep` preserves the template's empty revision directory. No automatic branding hook is enabled here: folder presence does not enable it. WORKBENCH and OUTPOST are opted in; broader adoption, live rollback/restore and legacy archive migration remain separate work. Preserve required repository-validation/conventional-title checks, governance controls, raster artwork, historical archives and immutable revision ZIPs. This cleanup changes only this checkpoint in STRATA.
-
-Factory creates from this template and neutralizes template-specific branding in its reviewed seed PR; do not fabricate a new product identity or copy STRATA artwork into a product. Product development and recurring schedules remain paused. No factory deployment, governance mutation, hook rollout or live pilot is started by this handoff. Resume from the current central handbook and FOUNDRY gap list after cleanup PRs merge.
