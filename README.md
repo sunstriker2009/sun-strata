@@ -21,7 +21,3 @@ Includes:
 **Important:** This template copies files, **not** GitHub branch protection, repository settings, secrets, environment approval rules or CI history. After creating a repository, follow the setup checklist. Stack-specific build and test workflows must be added separately.
 
 Governance: [SUN Git Workflow & Merge Policy v1.0](https://github.com/sunstriker2009/sun-ecosystem/blob/main/docs/governance/GIT-WORKFLOW.md).
-
-## Resuming governance work
-
-Read the [governance handoff](docs/GOVERNANCE-HANDOFF.md) for verified evidence, pending validation, cross-repository responsibilities and resume boundaries before continuing after thread archival.
