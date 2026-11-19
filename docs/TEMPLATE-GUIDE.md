@@ -4,7 +4,7 @@
 2. The source is already a template repository as checked for this handoff. If using a fork or replacement source, verify its template setting first.
 3. Select **Use this template → Create a new repository**.
 4. Choose a product repository name and visibility.
-5. Follow `docs/REPOSITORY-SETUP.md` in the generated repository.
+5. Follow `docs/REPOSITORY-SETUP.md` in the generated repository. Replace the inherited STRATA artwork and set the new product’s metadata in `branding/manifest.json`.
 6. Run the initial CI, then configure required checks and protected main.
 7. Use PRs and squash merges for subsequent changes.
 

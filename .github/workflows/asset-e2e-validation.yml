@@ -20,7 +20,7 @@ jobs:
         run: |
           set -euo pipefail
           ROOT="$RUNNER_TEMP/sun-asset-e2e"
-          mkdir -p "$ROOT/scripts" "$ROOT/assets" "$ROOT/branding/archive/originals" "$ROOT/branding/assets/icons"
+          mkdir -p "$ROOT/scripts" "$ROOT/assets" "$ROOT/branding/assets/icons"
           # Reviewed FOUNDRY adoption-kit head revision; never execute an unpinned main branch.
           PIN="2c09e13e3157fd9ced56a185cc312cd46dbea099"
           BASE="https://raw.githubusercontent.com/sunstriker2009/sun-foundry/$PIN"
@@ -39,10 +39,10 @@ jobs:
           from pathlib import Path
           from PIL import Image
           root = Path(os.environ["ASSET_E2E_ROOT"])
-          Image.new("RGB", (1800, 600), "#1c3450").save(root / "branding/archive/originals/readme-banner-v1.png")
+          Image.new("RGB", (1800, 600), "#1c3450").save(root / "branding/assets/readme-banner.png")
           symbol = Image.new("RGBA", (512, 512), (0, 0, 0, 0))
           symbol.paste((255, 140, 60, 255), (60, 60, 452, 452))
-          symbol.save(root / "branding/assets/symbol-canonical-v1.png")
+          symbol.save(root / "branding/assets/symbol.png")
           Image.new("RGBA", (16, 16), (30, 210, 150, 255)).save(root / "branding/assets/icons/icon-16.png")
           PY
       - name: Initialize, generate, verify and test tamper protection
@@ -51,12 +51,12 @@ jobs:
           set -euo pipefail
           ROOT="$ASSET_E2E_ROOT"
           python "$ROOT/scripts/init-asset-config.py" --product-root "$ROOT" \
-            --banner branding/archive/originals/readme-banner-v1.png \
-            --symbol branding/assets/symbol-canonical-v1.png \
+            --banner branding/assets/readme-banner.png \
+            --symbol branding/assets/symbol.png \
             --icon-override 16=branding/assets/icons/icon-16.png
           if python "$ROOT/scripts/init-asset-config.py" --product-root "$ROOT" \
-            --banner branding/archive/originals/readme-banner-v1.png \
-            --symbol branding/assets/symbol-canonical-v1.png; then
+            --banner branding/assets/readme-banner.png \
+            --symbol branding/assets/symbol.png; then
             echo "::error::Initializer unexpectedly overwrote existing config"
             exit 1
           fi
@@ -72,7 +72,7 @@ jobs:
           assert len(manifest["outputs"]) >= 9
           with Image.open(root / "branding/generated/icons/icon-16.png") as icon:
               assert icon.getpixel((0, 0)) == (30, 210, 150, 255)
-          for source in ("branding/archive/originals/readme-banner-v1.png", "branding/assets/symbol-canonical-v1.png"):
+          for source in ("branding/assets/readme-banner.png", "branding/assets/symbol.png"):
               assert hashlib.sha256((root / source).read_bytes()).hexdigest() == manifest["sources"]["banner" if "banner" in source else "symbol"]["sha256"]
           target = root / "branding/generated/icons/icon-16.png"
           target.write_bytes(b"tampered")

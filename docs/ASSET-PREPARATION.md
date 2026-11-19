@@ -4,14 +4,14 @@ This capability is **disabled by default**. The workflow `Optional asset prepara
 
 ## Adopt for a product
 
-1. Approve the product's own PNG banner and canonical symbol. Keep originals in the product's approved branding/archive structure. Do not reuse STRATA's identity.
+1. Approve the product's own PNG banner and canonical symbol. Use the canonical banner and symbol paths under `branding/assets/`. Do not reuse STRATA's identity.
 2. Select and **pin a reviewed FOUNDRY commit** from [sun-foundry](https://github.com/sunstriker2009/sun-foundry). Copy `scripts/prepare-assets.py`, `scripts/init-asset-config.py`, and `assets/requirements.txt` from **that same revision** into the product repository. Review copied code in a normal PR; never download and execute an unpinned remote script in CI.
 3. Initialize `branding/asset-config.json` locally using the copied initializer, supplying the approved paths:
 
 ```sh
 python scripts/init-asset-config.py --product-root . \
-  --banner branding/archive/originals/readme-banner-v1.png \
-  --symbol branding/assets/symbol-canonical-v1.png
+  --banner branding/assets/readme-banner.png \
+  --symbol branding/assets/symbol.png
 ```
 
 4. Review `iconSizes` against the symbol resolution, `transparentSymbol` against actual alpha, and `iconOverrides` for approved optical variants. Commit configuration only after review. Do **not** commit unreviewed generated assets.
