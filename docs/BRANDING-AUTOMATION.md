@@ -10,4 +10,4 @@ Full package requirements, revision behavior and recovery: https://github.com/su
 
 ## Gallery symbol synchronization
 
-The inherited **Notify Foundry of a symbol update** workflow runs when `branding/assets/symbol.png` changes on `main`. Foundry reads the approved symbol directly from the registered repository and proposes the gallery change through its normal PR flow. The factory provisions relay credentials when configured. For existing repositories and setup details, see the [Foundry workflow handbook](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/WORKFLOWS.md#symbol-synchronization).
+The SUN gallery embeds approved public repository symbols from their canonical path on `main`. The inherited **Notify Foundry of a symbol update** relay runs for private repositories when `branding/assets/symbol.png` changes on `main`. Foundry copies the PNG to the public gallery only when the registry explicitly approves public display. See the [Foundry workflow handbook](https://github.com/sunstriker2009/sun-foundry/blob/main/docs/WORKFLOWS.md#symbol-synchronization).
