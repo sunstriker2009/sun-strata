@@ -10,4 +10,6 @@
 
 STRATA is intentionally stack-agnostic; it does not compile .NET or Next.js projects. It only provides baseline repository checks and governance scaffolding.
 
+The inherited branding ZIP hook initializes a stock product README on the first successful install. It links the banner and uses the product name and description from `branding/manifest.json`. If you write a custom README before installing, wrap its branding header in `<!-- SUN BRANDING START -->` and `<!-- SUN BRANDING END -->` to have the hook manage that section.
+
 Optional product branding preparation is described in [ASSET-PREPARATION.md](ASSET-PREPARATION.md). It is not enabled automatically and does not substitute for owner approval.
